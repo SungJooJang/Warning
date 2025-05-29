@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-	<style type="text/css">
-		@font-face {
-    font-family: 'Pretendard';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-	}
-	</style>
+	<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" rel="stylesheet">
 
 <head>
 	<meta charset="utf-8">
@@ -19,7 +12,7 @@
 		body{margin: 0px}
 		nav{background-color: white;
 			position: fixed;
-			z-index: 1;
+			z-index: 10;
 			width: 900px;
 			left: 50%;
 			transform: translateX(-50%);}
@@ -28,12 +21,13 @@
 		h2{font-size: 32pt; line-height: 1.4}/*소제목*/
 		h3{font-size: 28pt; line-height: 1.4;}/*소제목2*/
 		h4{font-size: 18pt; line-height: 1.4;}/*본문*/
-		h5{font-size: 18pt; line-height: 1.8; font-family: Pretendard}/*목록*/
-		h1,h2,h3,h4,h5{font-family: Pretendard; font-weight: 700;
+		h5{font-size: 18pt; line-height: 1.8; font-family: 'SUIT', sans-serif; font-weight: 700;}/*목록*/
+		h1,h2,h3,h4,h5{font-family: 'SUIT', sans-serif; font-weight: 700;
 					margin-block-start: 0em; margin-block-end: 0em}
 
 		.wrap{width: 800px; margin: auto;}
 		.navwrap{width: 900px; margin: auto;}
+		.wrap-b{width: 1022px; margin: auto;}
 		.flex{display: flex; justify-content: space-between;}
 		.flex-gap{gap: 20px}
 		.z-index2{z-index: 2}
@@ -43,57 +37,88 @@
 
 		.rel{position: relative;}
 		
-		.ab-case1{position: absolute; top: 295px; right: 350px}
-		.ab-case10{position: absolute; top: 290px; left: 750px}
-		.ab-case2{position: absolute; top: 665px; right: 350px}
+		.ab-case1{position: absolute; top: 296px; right: 350px}
+		.ab-case10{position: absolute; top: 296px; left: 750px}
+		.ab-case2{position: absolute; top: 660px; right: 350px}
 		.ab-case20{position: absolute; top: 660px; left: 750px}
-		.ab-case3{position: absolute; top: 1090px; right: 350px}
-		.ab-case30{position: absolute; top: 1085px; left: 750px}
+		.ab-case3{position: absolute; top: 1077px; right: 350px}
+		.ab-case30{position: absolute; top: 1077px; left: 750px}
 
 		.ab-nav{position: absolute; left: 180px}
 		.ab-lux{position: absolute; top: 350px; right: 190px; z-index: -1}
-		.ab-sun{position: absolute; top: 1090px; right: -60px; z-index: -1}
-		.ab-candle{position: absolute; top: 1250px; left: 500px; z-index: -1}
+		.ab-sun{position: absolute; top: -80px; right: -70px; z-index: -1}
+		.ab-candle{position: absolute; top: 250px; left: 500px; z-index: -1}
+
+		.ab-right{position: absolute; left: 52%}
 
 		.menu{width: 155px; margin-left: 0;}
 		.menu li a{text-decoration: none; color: black;display: block;}
 		.menu li a:hover{font-weight: bold; text-decoration: underline;}
 
-		.pt12{font-family: Pretendard-Regular; font-weight: 700; font-size: 12pt}
+		.pt12{font-family: 'SUIT', sans-serif; font-weight: 700; font-size: 12pt}
 
-		.bg-black{background-color: black;}
-		.bg-white{background-color: white;}
+		.bg-black{background-color: black; z-index: -3}
+		.bg-white{background-color: white; z-index: -2}
+		.nav-white{background-color: white; z-index: 10}
 
 		.white{color: white}
 
-		.p10-b{padding: 0px 0px 6px 0px}
+		.p6-b{padding: 0px 0px 6px 0px}
+		.p10-b{padding: 0px 0px 10px 0px}
 		.p15-tb{padding: 15px 0px 15px 0px}
 		.p15{padding: 15px}
 		.p20-R{padding-right: 27px }
+		.p40-tb{padding: 40px 0px 40px 0px}
+		.p80{padding: 50px}
 		.p80-t{padding: 50px 0px 0px 0px}
 		.p80-b{padding: 0px 0px 50px 0px}
 		.p120{padding: 120px}
 		.p120-tb{padding: 120px 0px 120px 0px}
+		.p120-t{padding: 120px 0px 0px 0px}
+		.p120-b{padding: 0px 0px 120px 0px}
 
 		.p-case1{padding: 20px 0px 310px 0px}
 		.p-case2{padding: 0px 0px 365px 0px}
-		.p-case3{padding: 0px 0px 200px 0px}
+		.p-case3{padding: 0px 0px 120px 0px}
 
 		.p-logo{padding: 15px 55px 15px 67px}
 
-		.p-lux{padding-top: 650px}
+		.p-lux{padding-bottom: 650px}
+		.p-gara{padding-bottom: 1100px}
+
+		.p-glass{padding: 15px 0px 180px 0px}
 
 		.box{background-color: lightgrey; width: 155px; height: 110px}
-		.p-gara{padding-bottom: 1200px}
+		.box-black{background-color: black; width: 100%; height: 390px; padding: 60px}
+
+		.glass{background-color: lightgrey; width: 400px; height: 280px; position: absolute; top: 49px;left: 52%;}
+		.spf{background-color: lightgrey; width: 400px; height: 280px}
+
+		.scroll-container{
+			overflow: hidden;
+			white-space: nowrap;
+			width: 100%;
+			position: relative;
+		}
+		.scroll{
+			display: inline-block;
+			white-space: nowrap;
+			animation: scroll 10s linear infinite;
+			position: relative;
+		}
+		@keyframes scroll{
+			0%{transform: translateX(0);}
+			100%{transform: translateX(-50%);}
+		}
 
 	</style>
 
 </head>
 <body>
-	<nav class="bg-white">
-		<img src="spectrum.jpg" class="z-index2 ab-nav" height="51.5px">
+	<nav class="nav-white">
+		<img src="spectrum.jpg" class="z-index2 ab-nav" height="52px">
 		<div class="flex navwrap margin-auto">
-			<div class="p-logo pt12">Logo</div>
+			<div class="p-logo pt12">WBIL</div>
 			<ul class="menu flex flex-gap pt12">
 				<li><a href="#">Warning</a></li>
 				<li><a href="#" class="p20-R">Light</a></li>
@@ -148,11 +173,144 @@
 	</section>
 
 	<section class="bg-black">
-		<h3 class="p120-tb center white">하지만 빛의 위험성을 무시할 수는 없습니다</h3>
-		<h3 class="p120-tb center white">그렇다면 어떻게 빛의 위험성으로부터<br>도망칠 수 있을까요?</h3>
+		<h3 class="p120-t center white">하지만 빛의 위험성을 무시할 수는 없습니다</h3>
+
+		<div class="box-black">
+			<div class="scroll-container raw p10-b">
+					<h4 class="white ">
+					일광망막병증 Solar Retinopathy 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 백내장Cataract 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="eye 2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피부암 Skin Cancer  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광과민성 Photosensitivity 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 햇빛화상 Sunburn 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sunblock.jpg" class="" height="25px">  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광노화 Photoaging 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="city.jpg" class="" height="25px">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피부염 Photodermatitis  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DNA 손상 DNA Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="dna.jpg" class="" height="25px">
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					일광망막병증 Solar Retinopathy 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 백내장Cataract 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="eye 2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피부암 Skin Cancer  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광과민성 Photosensitivity 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 햇빛화상 Sunburn 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sunblock.jpg" class="" height="25px">  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광노화 Photoaging 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="city.jpg" class="" height="25px">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피부염 Photodermatitis  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DNA 손상 DNA Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="dna.jpg" class="" height="25px">
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					일광망막병증 Solar Retinopathy 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 백내장Cataract 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="eye 2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피부암 Skin Cancer  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광과민성 Photosensitivity 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 햇빛화상 Sunburn 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sunblock.jpg" class="" height="25px">  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광노화 Photoaging 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="city.jpg" class="" height="25px">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피부염 Photodermatitis  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DNA 손상 DNA Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="dna.jpg" class="" height="25px">
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					식물 성장 저해 Inhibition of Plant Growth  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;엽록소 파괴 Chlorophyll Degradation 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tree.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;식물 조직 손상 Plant Tissue Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수분 손실 증가 Increased Water Loss
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광스트레스 Light Stress  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="fox.jpg" class="" height="25px">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;생태계 교란 Ecosystem Disruption 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sea 2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;먹이사슬 교란 Food Chain Disruption
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					식물 성장 저해 Inhibition of Plant Growth  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;엽록소 파괴 Chlorophyll Degradation 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tree.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;식물 조직 손상 Plant Tissue Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수분 손실 증가 Increased Water Loss
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광스트레스 Light Stress  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="fox.jpg" class="" height="25px">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;생태계 교란 Ecosystem Disruption 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sea 2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;먹이사슬 교란 Food Chain Disruption
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					식물 성장 저해 Inhibition of Plant Growth  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;엽록소 파괴 Chlorophyll Degradation 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="tree.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;식물 조직 손상 Plant Tissue Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수분 손실 증가 Increased Water Loss
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;광스트레스 Light Stress  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="fox.jpg" class="" height="25px">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;생태계 교란 Ecosystem Disruption 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sea 2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;먹이사슬 교란 Food Chain Disruption
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					종 다양성 감소 Biodiversity Loss 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sabana2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수서 생물 피해 Aquatic Life Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;산란지 파괴 Breeding Ground Destruction 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서식지 변화 Habitat  Alteration
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sabana.jpg" class="" height="25px">  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동물 시력 손상 Animal Vision Damage 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="light 5.jpg" class="" height="25px">
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					종 다양성 감소 Biodiversity Loss 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sabana2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수서 생물 피해 Aquatic Life Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;산란지 파괴 Breeding Ground Destruction 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서식지 변화 Habitat  Alteration
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sabana.jpg" class="" height="25px">  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동물 시력 손상 Animal Vision Damage 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="light 5.jpg" class="" height="25px">
+					</h4>
+					</h4>
+				</div>
+				<div class="scroll-container raw p10-b">
+					<h4 class="white">
+					종 다양성 감소 Biodiversity Loss 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sabana2.jpg" class="" height="25px"> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수서 생물 피해 Aquatic Life Damage  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;산란지 파괴 Breeding Ground Destruction 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서식지 변화 Habitat  Alteration
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sabana.jpg" class="" height="25px">  
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;동물 시력 손상 Animal Vision Damage 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="light 5.jpg" class="" height="25px">
+					</h4>
+					</h4>
+				</div>
+			</div>
+		</div>
+
+		<h3 class="p120-b center white">그렇다면 어떻게 빛의 위험성으로부터<br>도망칠 수 있을까요?</h3>
 	</section>
 
-	<section class="p120 rel">
+	<section class="p120 rel p-lux bg-white">
 		<img src="lux.jpg" class="ab-lux" height="700px">
 		<div class="wrap">
 			<h2 class="">빛의 단위 LUX</h2>
@@ -163,47 +321,103 @@
 				표면에 도달하는 빛의 양을 의미합니다.<br><br>
 				LUX =  광도 (c) / 거리 (d)^2
 			</h4>
-			<h4 class="p-lux p-gara">
-				촛불 1개 = 1 LUX<br>
-				자연광(태양) = 40,000 LUX - 100,000 LUX
-			</h4>
-			<img src="sun.png" class="ab-sun" height="1300px">
-			<img src="candle.png" class="ab-candle" height="20px">
+		</div>
+	</section>
+	<section class="p120-t bg-black rel">
+			<div class="wrap">
+				<h4 class=" p-gara white">
+					촛불 1개 = 1 LUX<br>
+					자연광 = (맑은 날 기준)평균 100,000 LUX
+				</h4>
+				<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXNzZnRwZmF2bWh3d2hrazYyaHJmdzk3eXhhaGFkZDB6M25yNHpoOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PNf2Ke7gn6oDK/giphy.gif" class="ab-sun" height="1500px">
+				<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdwMzhiZWpsbXZ1eDc0ZmhsOWtqNDRwZTVzZjQ2ejJwMWV3cXI3aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11S1Zy5SPIqv84/giphy.gif" class="ab-candle" height="30px">
+			</div>
+	</section>
+
+	<section class="p120-tb bg-white"> 
+		<h4 class="wrap p120-b">더보기</h4>
+		<div class="rel">
+			<div>
+				<h4 class="">레이저 5,600,000 LUX</h4>
+				<img src="laser.png" width="350px">
+			</div>
+			<div>
+				<h4 class="ab-">망막 화상 가능 1,000,000 LUX</h4>
+				<img src="blood.png" width="350px">
+			</div>
+			<div>
+				<h4 class="">실내 적정 밝기 400 LUX</h4>
+				<img src="room.png" width="350px">
+			</div>
+			<div>
+				<h4 class="">시리우스성 10<sup>-5</sup> LUX</h4>
+				<img src="sirius.png" width="350px">
+			</div>
+			<div>
+				<h4 class="">경기장 조명 1,500 LUX</h4>
+				<img src="stadium.png" width="350px">
+			</div>
+			<div>
+				<h4 class="ab-">망막 손상 가능 100,000 LUX</h4>
+				<img src="eye 3.png" width="350px">
+			</div>
+		</div>
+	</section>
+
+	<section class="p120-tb">
+		<h3 class="center p80">100,000 LUX 이상의 빛은<br>실명을 초래할 수 있습니다</h2>
+	</section>
+
+	<section class="p120-tb">
+		<h2 class="wrap">빛 차단하기</h2>
+		<h4 class="wrap p15-tb">빛은 위험하지만,<br>빛을 차단시키는 방법은 생각보다 간단합니다.
+		</h4>
+		<div class="wrap p80-t rel">
+			<h4 class="">유리창 통과시키기</h4>
+			<h4 class="wrap p15-tb p-glass">유리창을 통과하는 순간 <br>빛의 세기는 반감합니다.</h4>
+			<div class="glass"></div>
+		</div>
+		<div class="wrap p80-t rel">
+			<div class="ab-right">
+			<h4 class="">자외선 차단제 이용하기</h4>
+			<h4 class="wrap p15-tb">빛으로부터 피부를 보호하기 위해서는<br>자외선 차단제가 효과적입니다.</h4>
+			</div>
+			<div class="spf"></div>
 		</div>
 	</section>
 
 	<section class="bg-black">
 		<div class="p120-tb ">
 			<h3 class="center white p80-b">다가오는 여름, 빛 조심하세요</h3>
-			<div class="wrap flex p10-b">
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
+			<div class="wrap-b flex p6-b">
+				<img src="light 9.jpg" width="200">
+				<img src="light 3.jpg" width="200">
+				<img src="rgb.jpg" width="200">
+				<img src="sea 1.jpg" width="200">
+				<img src="tree.jpg" width="200">
 			</div>
-			<div class="wrap flex p10-b">
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
+			<div class="wrap-b flex p6-b">
+				<img src="space.jpg" width="200">
+				<img src="nature.jpg" width="200">
+				<img src="fox.jpg" width="200">
+				<img src="dna.jpg" width="200">
+				<img src="city.jpg" width="200">
 			</div>
-			<div class="wrap flex p10-b">
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
+			<div class="wrap-b flex p6-b">
+				<img src="bird.jpg" width="200">
+				<img src="light 2.jpg" width="200">
+				<img src="eye 1.jpg" width="200">
+				<img src="light 4.jpg" width="200">
+				<img src="light 6.jpg" width="200">
 			</div>
-			<div class="wrap flex p10-b">
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
-				<div class="box"></div>
+			<div class="wrap-b flex p6-b">
+				<img src="sea 3.png" width="200">
+				<img src="light 5.jpg" width="200">
+				<img src="sabana.jpg" width="200">
+				<img src="light 7.jpg" width="200">
+				<img src="light 8.jpg" width="200">
 			</div>
-				<!-- <img src="" width="195px"> -->
+				
 		</div>
 	</section>
 
