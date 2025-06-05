@@ -31,6 +31,7 @@
 		.flex{display: flex; justify-content: space-between;}
 		.flex-gap{gap: 20px}
 		.z-index2{z-index: 2}
+		.z-index5{z-index: 5}
 
 		.margin-auto{margin: auto;}
 		.center{text-align: center;}
@@ -52,6 +53,14 @@
 		.ab-scroll{position: absolute; top: 250px;}
 
 		.ab-right{position: absolute; left: 52%}
+
+		.ab-lili{position: absolute; top: -145%; left: -35%}
+		@keyframes lili {
+			0%{width: 80%}
+			50%{width: 120%}
+			100%{width: 80%}
+		}
+		.lili{animation: lili 5s infinite;}
 
 		.menu{width: 155px; margin-left: 0;}
 		.menu li a{text-decoration: none; color: black;display: block;}
@@ -654,6 +663,7 @@ imageDisplay.addEventListener('click', () => {
 	</section>
 
 	<section class="p120-tb rel">
+		<img src="lili.png" class="ab-lili lili z-index2">
 		<h3 class="center p80-t p15-b">100,000 LUX 이상의 빛은<br>실명을 초래할 수 있습니다</h3>
 		<p class="pt12 center p80-b">*자연광 평균 100,000 LUX (맑은 날 기준)*
 		<!-- <div class="flex ab-scroll">
@@ -669,7 +679,7 @@ imageDisplay.addEventListener('click', () => {
 		</div> -->
 	</section>
 
-	<section class="p120-tb">
+	<section class="p120-tb z-index5">
 		<h2 class="wrap">빛 차단하기</h2>
 		<h4 class="wrap p15-tb">빛은 위험하지만,<br>빛을 차단시키는 방법은 생각보다 간단합니다.
 		</h4>
