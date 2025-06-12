@@ -33,6 +33,7 @@
 		.flex-gap{gap: 20px}
 		.z-index2{z-index: 2}
 		.z-index-1{z-index: -1}
+		.z-index1{z-index: 1}
 
 
 		.margin-auto{margin: auto;}
@@ -193,6 +194,8 @@
       width: max-content;
     }
     .bold{font-size: 32pt; line-height: 1.2; font-weight: 800}
+
+    .back{position: absolute; top: -678px ;left: 50%; left: 50%; transform: translateX(-50%); text-align: center;object-fit: cover; }
 
 
 	</style>
@@ -706,39 +709,41 @@ imageDisplay.addEventListener('click', () => {
 		</div>
 	</section>
 
-	<section class="bg-black">
+	<section class="bg-black ">
 		<div class="p120-t p80-b">
 			<h3 class="center white p80-b">다가오는 여름, 빛 조심하세요</h3>
 			<div class="wrap-b flex p6-b">
-				<img src="light 9.jpg" width="200" class="credit-hover">
-				<img src="light 3.jpg" width="200" class="credit-hover">
-				<img src="rgb.jpg" width="200" class="credit-hover">
-				<img src="sea 1.jpg" width="200" class="credit-hover">
-				<img src="tree.jpg" width="200" class="credit-hover">
+				<img src="light 9.jpg" width="200" class="credit-hover z-index1">
+				<img src="light 3.jpg" width="200" class="credit-hover z-index1">
+				<img src="rgb.jpg" width="200" class="credit-hover z-index1">
+				<img src="sea 1.jpg" width="200" class="credit-hover z-index1">
+				<img src="tree.jpg" width="200" class="credit-hover z-index1">
 			</div>
 			<div class="wrap-b flex p6-b">
-				<img src="space.jpg" width="200" class="credit-hover">
-				<img src="nature.jpg" width="200" class="credit-hover">
-				<img src="fox.jpg" width="200" class="credit-hover">
-				<img src="dna.jpg" width="200" class="credit-hover">
-				<img src="city.jpg" width="200" class="credit-hover">
+				<img src="space.jpg" width="200" class="credit-hover z-index1">
+				<img src="nature.jpg" width="200" class="credit-hover z-index1">
+				<img src="fox.jpg" width="200" class="credit-hover z-index1">
+				<img src="dna.jpg" width="200" class="credit-hover z-index1">
+				<img src="city.jpg" width="200" class="credit-hover z-index1">
 			</div>
 			<div class="wrap-b flex p6-b">
-				<img src="bird.jpg" width="200" class="credit-hover">
-				<img src="light 2.jpg" width="200" class="credit-hover">
-				<img src="eye 1.jpg" width="200" class="credit-hover">
-				<img src="light 4.jpg" width="200" class="credit-hover">
-				<img src="light 6.jpg" width="200" class="credit-hover">
+				<img src="bird.jpg" width="200" class="credit-hover z-index1">
+				<img src="light 2.jpg" width="200" class="credit-hover z-index1">
+				<img src="eye 1.jpg" width="200" class="credit-hover z-index1">
+				<img src="light 4.jpg" width="200" class="credit-hover z-index1">
+				<img src="light 6.jpg" width="200" class="credit-hover z-index1">
 			</div>
 			<div class="wrap-b flex p6-b">
-				<img src="sea 3.png" width="200" class="credit-hover">
-				<img src="light 5.jpg" width="200" class="credit-hover">
-				<img src="sabana.jpg" width="200" class="credit-hover">
-				<img src="light 7.jpg" width="200" class="credit-hover">
-				<img src="light 8.jpg" width="200" class="credit-hover">
+				<img src="sea 3.png" width="200" class="credit-hover z-index1">
+				<img src="light 5.jpg" width="200" class="credit-hover z-index1">
+				<img src="sabana.jpg" width="200" class="credit-hover z-index1">
+				<img src="light 7.jpg" width="200" class="credit-hover z-index1">
+				<img src="light 8.jpg" width="200" class="credit-hover z-index1">
 			</div>
 			<div class="center lightgrey pt12 p80-tb ">WBIL©2025 JANGSUNGJOO All Rights Reserved</div>
-		</div>
+		</h3>
+		<div class="rel"><img src="back.png" width="1026px" height="560px" class="back "></div>
+
 	</section>
 
 </body>
