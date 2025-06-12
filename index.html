@@ -9,6 +9,7 @@
 	<title>! Warning !</title>
 
 	<style type="text/css">
+		html {scroll-behavior: smooth;}
 		body{margin: 0px; overflow-x: hidden;}
 		nav{background-color: white;
 			position: fixed;
@@ -32,19 +33,19 @@
 		.flex-gap{gap: 20px}
 		.z-index2{z-index: 2}
 		.z-index-1{z-index: -1}
-		
+
 
 		.margin-auto{margin: auto;}
 		.center{text-align: center;}
 
 		.rel{position: relative;}
 		
-		.ab-case1{position: absolute; top: 316px; }
-		.ab-case10{position: absolute; top: 296px; left: 58%}
-		.ab-case2{position: absolute; top: 770px; }
-		.ab-case20{position: absolute; top: 750px; left: 58%}
-		.ab-case3{position: absolute; top: 1225px; }
-		.ab-case30{position: absolute; top: 1205px; left: 58%}
+		.ab-case1{position: absolute; top: 316px; object-fit: cover}
+		.ab-case10{position: absolute; top: 296px; left: 58%; object-fit: cover}
+		.ab-case2{position: absolute; top: 770px; object-fit: cover}
+		.ab-case20{position: absolute; top: 750px; left: 58%; object-fit: cover}
+		.ab-case3{position: absolute; top: 1225px; object-fit: cover}
+		.ab-case30{position: absolute; top: 1205px; left: 58%; object-fit: cover}
 
 		.ab-nav{position: absolute; left: 180px}
 		.ab-lux{position: absolute; top: 350px; right: 190px; z-index: -1}
@@ -53,9 +54,9 @@
 
 		.ab-scroll{position: absolute; top: 250px;}
 
-		.ab-right{position: absolute; left: 52%}
+		.ab-right{position: absolute; left: 52%; padding-bottom: 250px}
 
-		.ab-lili{position: absolute; top: -145%; left: -35%}
+		.ab-lili{position: absolute; top: -135%; left: -25%}
 		@keyframes lili {
 			0%{width: 80%}
 			50%{width: 120%}
@@ -82,6 +83,7 @@
 		.nav-white{background-color: white; z-index: 10}
 
 		.white{color: white}
+		.lightgrey{color: lightgrey; opacity: 50%}
 
 		.display-none{display: none;}
 
@@ -95,10 +97,12 @@
 		.p80{padding: 50px}
 		.p80-t{padding: 50px 0px 0px 0px}
 		.p80-b{padding: 0px 0px 50px 0px}
+		.p80-tb{padding: 50px 0px 50px 0px}
 		.p120{padding: 120px}
 		.p120-tb{padding: 120px 0px 120px 0px}
 		.p120-t{padding: 120px 0px 0px 0px}
 		.p120-b{padding: 0px 0px 120px 0px}
+		.p400-b{padding: 0px 0px 400px 0px}
 
 		.p-case1{padding: 20px 0px 310px 0px}
 		.p-case2{padding: 0px 0px 365px 0px}
@@ -116,7 +120,7 @@
 		.box-black{background-color: black; width: 100vw; height: 390px; padding: 60px 0px 60px 0px; overflow: hidden;}
 
 		.glass{background-color: lightgrey; width: 400px; height: 280px; position: absolute; top: 49px;left: 52%;}
-		.spf{background-color: lightgrey; width: 400px; height: 280px}
+		.spf{background-color: lightgrey; width: 400px; height: 280px; position: absolute;}
 
 		.scroll-container{
 			overflow: hidden;
@@ -289,15 +293,15 @@ imageDisplay.addEventListener('click', () => {
 	<nav class="nav-white">
 		<img src="spectrum.jpg" class="z-index2 ab-nav" height="52px">
 		<div class="flex navwrap margin-auto">
-			<div class="p-logo pt12">WBIL</div>
+			<div class="p-logo pt12"><a href="#start-section" style="color: inherit; text-decoration: none;">WBIL</a></div>
 			<ul class="menu flex flex-gap pt12">
-				<li><a href="#">Warning</a></li>
-				<li><a href="#" class="p20-R">Light</a></li>
+				<li><a href="#warning-section">Warning</a></li>
+				<li><a href="#light-section" class="p20-R">Light</a></li>
 			</ul>
 		</div>
 	</nav>
 
-	<section class="bg-black p120">
+	<section id="start-section" class="bg-black p120">
 		<h1 class="center white margin-auto">WARNING<br>Beware of Intense Light</h1>
 		<div class="center p80-t"><img src="light.gif"></div>
 	</section>
@@ -307,9 +311,9 @@ imageDisplay.addEventListener('click', () => {
 		<h4 class="p15-tb">빛은 인간의 삶과 지구 생태계 전체를 지탱하는<br>생명 유지를 위한 필수 요소입니다.
 		</h4>
 
-		<img src="space.jpg" class="ab-case1" width="420px">
+		<img src="space.jpg" class="ab-case1" width="420px" height="365px">
 		<div class="ab-case10">
-			<h3 class="p15-tb">On a Global Level</h2>
+			<h3 class="p15-tb">Global Level</h2>
 			<h5>
 			환경 온도 조절<br>
 			대기 중 오존 형성<br>
@@ -321,9 +325,9 @@ imageDisplay.addEventListener('click', () => {
 			</h5>
 		</div>
 
-		<img src="city.jpg" class="ab-case2" width="420px">
+		<img src="city.jpg" class="ab-case2" width="420px" height="365px">
 		<div class="ab-case20">
-			<h3 class="p15-tb">In Case of Humans</h2>
+			<h3 class="p15-tb">Human</h2>
 			<h5>
 			비타민 D 합성<br>
 			생체리듬 조절<br>
@@ -336,20 +340,22 @@ imageDisplay.addEventListener('click', () => {
 		</div>
 
 		
-		<img src="sabana2.jpg" class="ab-case3" width="420px">	
+		<img src="sabana2.jpg" class="ab-case3" width="420px" height="365px">	
 		<div class="ab-case30">
-			<h3 class="p15-tb">In Case of<br>Plants and Animals</h3>
+			<h3 class="p15-tb">Plants and Animals</h3>
 			<h5>
 			식물의 광합성<br>
 			계절 변화 인식<br>
 			동식물의 생장 유도<br>
 			개화 시기 조절<br>
-			번식 주기 조절
+			번식 주기 조절<br>
+			발아 시기 조절
+			색 변화 및 위<br>
 			</h5>
 		</div>
 	</section>
 
-	<section class="bg-black">
+	<section id="warning-section" class="bg-black">
 		<h3 class="p120-t center white">하지만 빛의 위험성을 무시할 수는 없습니다</h3>
 
 		<div class="box-black">
@@ -601,7 +607,7 @@ imageDisplay.addEventListener('click', () => {
 		<h3 class="p120-b center white">그렇다면 어떻게 빛의 위험성으로부터<br>도망칠 수 있을까요?</h3>
 	</section>
 
-	<section class="p120 rel p-lux bg-white">
+	<section id="light-section" class="p120 rel p-lux bg-white">
 		<img src="lux.jpg" class="ab-lux" height="700px">
 		<div class="wrap">
 			<h2 class="">빛의 단위 LUX</h2>
@@ -680,7 +686,7 @@ imageDisplay.addEventListener('click', () => {
 		</div> -->
 	</section>
 
-	<section class="p120-tb">
+	<section class="p120-tb z-index2 p400-b">
 		<h2 class="wrap z-index5">빛 차단하기</h2>
 		<h4 class="wrap p15-tb">빛은 위험하지만,<br>빛을 차단시키는 방법은 생각보다 간단합니다.
 		</h4>
@@ -688,6 +694,7 @@ imageDisplay.addEventListener('click', () => {
 			<h4 class="">유리창 통과시키기</h4>
 			<h4 class="wrap p15-tb p-glass">유리창을 통과하는 순간 <br>빛의 세기는 반감합니다.</h4>
 			<div class="glass"></div>
+			<img src="light 6.jpg" class="glass">
 		</div>
 		<div class="wrap p80-t rel">
 			<div class="ab-right">
@@ -695,11 +702,12 @@ imageDisplay.addEventListener('click', () => {
 			<h4 class="wrap p15-tb">빛으로부터 피부를 보호하기 위해서는<br>자외선 차단제가 효과적입니다.</h4>
 			</div>
 			<div class="spf"></div>
+			<img src="skin.png" class="spf">
 		</div>
 	</section>
 
 	<section class="bg-black">
-		<div class="p120-tb ">
+		<div class="p120-t p80-b">
 			<h3 class="center white p80-b">다가오는 여름, 빛 조심하세요</h3>
 			<div class="wrap-b flex p6-b">
 				<img src="light 9.jpg" width="200" class="credit-hover">
@@ -729,7 +737,7 @@ imageDisplay.addEventListener('click', () => {
 				<img src="light 7.jpg" width="200" class="credit-hover">
 				<img src="light 8.jpg" width="200" class="credit-hover">
 			</div>
-				
+			<div class="center lightgrey pt12 p80-tb ">WBIL©2025 JANGSUNGJOO All Rights Reserved</div>
 		</div>
 	</section>
 
